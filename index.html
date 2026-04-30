@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<!-- ================================
+     HEAD
+     ================================ -->
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="Logo.png" type="image/x-icon">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monolit</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <img src="Logo.png" alt="Monolit">
+  </div>
+
+  <div class="container-main">
+
+    <!-- ================================
+         NAV
+         ================================ -->
+    <nav class="nav-grid">
+      <button type="button" class="nav-card" onclick="kontakt()">
+        <span class="kontaktnav">KONTAKT</span>
+      </button>
+      <button class="nav-card" onclick="monolit()">
+        <img src="Logo.png" alt="Logo firmy 'Monolit'" class="logonav">
+      </button>
+      <button type="button" class="nav-card" onclick="galeria()">
+        <span class="galerianav">GALERIA</span>
+      </button>
+    </nav>
+
+    <!-- ================================
+         HERO
+         ================================ -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">MONOLIT</h1>
+        <p class="hero-subtitle">Kamień naturalny. Trwałość i elegancja.</p>
+        <button class="defaultButton hero-button" onclick="kontakt()">SKONTAKTUJ SIĘ</button>
+      </div>
+    </section>
+
+    <!-- ================================
+         OFFER
+         ================================ -->
+    <main class="offer-grid">
+
+      <div class="title">
+        <h1>NASZA OFERTA.</h1>
+      </div>
+
+      <div class="offer-card blatyk">
+        <img src="temp.jpg" alt="Blaty kuchenne">
+        <p>Blaty kuchenne</p>
+      </div>
+
+      <div class="offer-card blatyl" >
+        <img src="temp.jpg" alt="Blaty łazienkowe">
+        <p>Blaty łazienkowe</p>
+      </div>
+
+      <div class="offer-card schody" >
+        <img src="temp.jpg" alt="Schody">
+        <p>Schody</p>
+      </div>
+
+      <div class="offer-card parapety" >
+        <img src="temp.jpg" alt="Parapety">
+        <p>Parapety</p>
+      </div>
+
+      <div class="offer-card okladzina" >
+        <img src="temp.jpg" alt="Okładzina ścienna panelami">
+        <p>Okładzina ścienna panelami</p>
+      </div>
+
+      <div class="offer-card stoliki" >
+        <img src="temp.jpg" alt="Stoliki">
+        <p>Stoliki</p>
+      </div>
+
+      <div class="offer-card indyw">
+        <img src="temp.jpg" alt="Indywidualne projekty">
+        <p>Indywidualne projekty</p>
+      </div>
+
+      <button id="galleryButton" class="defaultButton" type="button" onclick="galeria()">
+        GALERIA
+      </button>
+
+    </main>
+
+    <!-- ================================
+         CONTACT / FOOTER
+         ================================ -->
+    <footer class="contact-grid">
+
+      <h1 class="contact-header">KONTAKT</h1>
+
+      <p class="contact-text1">
+        Dziękujemy za zainteresowanie ofertą Monolit. Skontaktuj się z nami pod numerem
+        <span class="bold">+48 572 037 666</span> lub wypełnij formularz,
+        odpowiemy tak szybko, jak to możliwe.
+      </p>
+
+      <a href="tel:+48572037666" class="contact-button defaultButton">ZADZWOŃ</a>
+
+      <div class="textInput" id="nameInput">
+        <label for="fullName">Imię Nazwisko</label><br>
+        <input type="text" id="fullName" name="fullName" placeholder="Imię Nazwisko">
+      </div>
+
+      <div class="textInput" id="locInput">
+        <label for="localization">Lokalizacja</label><br>
+        <input type="text" id="localization" name="localization" placeholder="Miasto">
+      </div>
+
+      <div class="selectInput" id="projectInput">
+        <label for="projectType">Projekt</label><br>
+        <select id="projectType" name="projectType">
+          <option value="" disabled selected>Wybierz projekt</option>
+          <option value="Blat kuchenny">Blat kuchenny</option>
+          <option value="Blat łazienkowy">Blat łazienkowy</option>
+          <option value="Schody">Schody</option>
+          <option value="Parapet">Parapet</option>
+          <option value="Stolik">Stolik</option>
+          <option value="Okładzina scienna (panele)">Okładzina ścienna (panele)</option>
+          <option value="Indywidualny projekt">Indywidualny projekt</option>
+        </select>
+      </div>
+
+      <div class="textInput" id="contactInfoInput">
+        <label for="contactInfo">Sposób kontaktu</label>
+        <input type="text" name="contactInfo" id="contactInfo" placeholder="Numer telefonu/e-mail">
+      </div>
+
+      <div class="textInput" id="messageInput">
+        <label for="message">Wiadomość</label>
+        <input type="text" name="message" id="message" placeholder="Informacje dodatkowe/pytania">
+      </div>
+
+      <button type="submit" class="defaultButton" id="submitButton">WYŚLIJ</button>
+
+      <div id="mapContainer">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1283.8736963779381!2d19.21996936133257!3d49.94108097976329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716971928f9696d%3A0xc2c00de4b359fdea!2sZaolszynie%202%2C%2032-651%20Osiek!5e0!3m2!1spl!2spl!4v1777544785122!5m2!1spl!2spl"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </footer>
+
+  </div>
+
+</body>
+</html>
